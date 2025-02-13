@@ -52,11 +52,11 @@ public class GeometrijskiLikovi {
      }
  }
         double []povrsine={povrsinaTrokut,povrsinaKrug,povrsinaPravokutnik};
-        String[] imena = {"Površina kruga", "Površina trokuta", "Površina pravokutnika"};
+        String[] imena = {"Površina trokut", "Površina krug", "Površina pravokutnika"};
         int n = povrsine.length;
-        boolean swapped;
+        boolean zamjena;
         do {
-            swapped = false;
+            zamjena= false;
             int i = 0;
             while (i < n - 1) {
                 if (povrsine[i] > povrsine[i + 1]) {
@@ -70,12 +70,12 @@ public class GeometrijskiLikovi {
                     imena[i] = imena[i + 1];
                     imena[i + 1] = tempName;
 
-                    swapped = true;
+                    zamjena = true;
                 }
                 i++;
             }
             n--;
-        } while (swapped);
+        } while (zamjena);
 
 
         System.out.println("\nPovršine geometrijskih likova (sortirane):");
